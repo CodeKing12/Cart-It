@@ -1,0 +1,144 @@
+body, html {
+    height: 100%;
+    color: #79c438;
+    border: 10px solid red;
+}
+
+.navvedbbar {
+    background-color: #522882;
+    color: red;
+    margin-bottom: -1px;
+}
+
+.firstnav li a {
+    color: #ff9800;
+}
+
+.firstnav li a:hover {
+    color: #522882;
+    background-color: #ff9800;
+}
+
+#exception a:hover {
+    background-color: #522882;
+}
+
+.vert {
+    display: inline-block;
+}
+
+@media screen and (max-width: 772px) {
+    .vert li{
+        display: inline-block;
+    }
+}
+
+.navul {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/20210415_181048_0000 1.png");
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  /*border: 1px solid red;*/
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #73b635;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 750px) {
+    #banner-img {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/20210415_182733_0000.png");
+        background-size: cover;
+        background-position: center;
+        height: 570px;
+    }
+
+    .mobileshopnav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #banner-img {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/20210415_170249_0001.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .lapshopnav, .lapcontent {
+        display: none;
+    }
+}
+
+.lapshopnav ul {
+    border-bottom: 3px solid #73b635;
+    border-right: 2px solid #73b635;
+    width: 99%;
+}
+
+.lapshopnav ul li {
+    background-color: #3e2957;
+}
+
+.lapshopnav ul li:hover, .lapshopnav ul li a:hover, .lapshopnav ul:hover {
+    background-color: #F5BD1F;
+}
+
+.lapshopnav ul li a{
+    color: #79c438;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.lapshopnav {
+    margin: 0;
+    width: 30%;
+    height: 500px;
+    margin-left: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 30%;
+}
+
+.lapcontent {
+    margin-left: 201px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content:center;
+    background-color: #3e2957;
+  }
+
+.lapcontent {
+    width: 70%;
+    height: 150vh;
+    margin-left: -1px;
+    background: lavender;
+    height: 1000px;
+    min-height: 100vh;
+    padding: 1em;
+}
+
+.header_pro {
+    background: #3e2957;
+    padding: 5px;
+    margin-top: -10px;
+    text-align: center;
+}

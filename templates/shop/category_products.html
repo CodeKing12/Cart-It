@@ -1,0 +1,7 @@
+{% extends 'basepage.html' %}
+
+{% block content %}
+    {% for product in category_list %}
+        <h3>{{ product.name }}</h3>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends 'blogbase.html' %}
+
+{% block styles %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'shop/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!doctype html>
+      <body data-spy="scroll" data-target=".scrollednav" data-offset="50">
+        <div>
+          <nav class="navbar navbar-expand-sm navbar-light navvedbbar justify-content-center">
+            <div>
+              <div class="container-fluid" id="myNavbar">
+                <ul class="nav navbar-nav vert navul firstnav">
+                  <li class="nav-item"><a href="{% url 'home_page' %}">Home</a></li>
+                  <li class="nav-item"><a href="{% url 'shop_home' %}">Shop</a></li>
+                  <li class="nav-item"><a class="logonav" href=""><img src="{% static 'shop/images/20210415_182733_0000 24.png' %}"></a></li>
+                  <li class="nav-item"><a href="">Account</a></li>
+                  <li class="nav-item"><a href="">Golden Cart</a></li>
+                </ul>
+              </div>
+            </div>
+
+             <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+          </nav>
+          <div id="carouselId" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators listremove">
+              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselId" data-slide-to="1"></li>
+              <li data-target="#carouselId" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner navdiv" role="listbox">
+              <div class="carousel-item active slides">
+                <img src="{% static 'shop/images/pexels-nataliya-vaitkevich-621 copy 4.jpg' %}" alt="First slide" class="img-responsive">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Title</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="carousel-item slides">
+                <img src="{% static 'shop/images/pexels-karolina-grabowska-5632382 3.jpg' %}" alt="Second slide" class="img-responsive">
+                <div>
+                  <h3>Title</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+              <div class="carousel-item slides">
+                <img src="{% static 'shop/images/pexels-karolina-grabowska-5632382 3334.jpg' %}" alt="Third slide" class="img-responsive">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Title</h3>
+                  <p>Description</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <nav class="scrollednav navbar navbar-inverse fixit rounded-lg" id="sticknav">
+          <div class="container-fluid">
+            <div class="navbar-header disappear">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">WebSiteName</a>
+            </div>
+            <div>
+              <div class="container-fluid" id="myNavbar">
+                <ul class="nav navbar-nav nav-tabs vert" id="secnav">
+                  <li><a href="#section1">About Us</a></li>
+                  <li><a href="#section2">Our Mission</a></li>
+                  <li><a href="#section3">Our Vision</a></li>
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Our Goal<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#section41">Section 4-1</a></li>
+                      <li><a href="#section42">Section 4-2</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="content">
+          <div id="section1" class="container-fluid">
+            <h1>About Us</h1>
+            <p>We are are an diligent, dedicated and cheerful e-commerce company with immense passion for catering to the needs of fello individuals like ourselves </p>
+            <p>We sell electronic products ranging from appliances to mobile phones and laptops, etc.</p>
+          </div>
+          <div id="section2" class="container-fluid">
+            <h1>Our Mission</h1>
+            <p>We aim to become the most trustworthy brand for any electronic related product with the lowest prices and the best offers.</p>
+            <p>We want to make sure that you, our customer, does not have to worry about unnecessary price inflation when you desire any electronics.</p>
+          </div>
+          <div id="section3" class="container-fluid">
+            <h1>Our Vision</h1>
+            <p>In our future, we see a fast-paced and well-grown enterprise known all around the world for our low prices, quality products, and best customer experience.</p>
+            <p>We see a hardworking organization ith the best core-values and work ethics.</p>
+          </div>
+          <div id="section41" class="container-fluid">
+            <h1>Our Short-term Goals</h1>
+            <p>Our goal for the next 3 years is to become a popular and the most recommended brand for anything electronic</p>
+            <p>We also intend to have doubled over our investors' capital by the end of the said period while delivering world class services to YOU.</p>
+          </div>
+          <div id="section42" class="container-fluid">
+            <h1>Our Long-term Goals</h1>
+            <p>In the not-so-far future, we aim to be far-ahead than any other e-commerce store in terms of electronics sale, lowest prices, faster and safer delivery and customer satisfaction. </p>
+            <p>In 7-10 years from now, we aim to have comepletely changed the e-commerce space as online-stores all over the world will emulate our core values, and pricing-policy in a bid to stay in the market which will lead to a positive change for online shopping everywhere in the world </p>
+          </div>
+        </div>
+        <footer class="ending">
+          <img src="{% static 'shop/images/20210415_182733_0000 21.png' %}">
+        <div id="alldiv">
+          <div id="itemlist">
+            <ul class="goods" id="itemul">
+              <li>
+                <div class="equal"><i class="fas fa-laptop-house"></i></div>
+                <span></span>Home Appliances</li>
+              <li>
+                <div class="equal"><i class="far fa-building"></i></div>
+                <span></span>Office Appliances</li>
+              <li>
+                <div class="equal"><i class="far fa-file-code"></i></div>
+                <span></span>Developer Tools</li>
+              <li>
+                <div class="equal"><i class="fas fa-mobile-alt"></i></div>
+                <span></span>Mobile Phones and Tablets</li>
+              <li>
+                <div class="equal"><i class="fas fa-desktop"></i></div>
+                <span></span>Desktops and Laptops</li>
+                <li>
+                  <div class="equal">
+                    <i class="fas fa-tools ictop fa-xs" data-fa-transform="up-6"></i>
+                    <i class="fas fa-mobile-alt icnorm"></i>
+                  </div>
+                  <span></span>Refurbished Products
+                </li>
+            </ul>
+            <ul class="contact" id="itemul">
+              <li><i class="fa fa-twitter" aria-hidden="true"></i><span></span>Twitter</li>
+              <li><i class="fab fa-discord"></i><span></span>Discord</li>
+              <li><i class="far fa-paper-plane"></i><span></span>Email</li>
+              <li><i class="fab fa-github"></i><span></span>Github</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Copyright - CartIt International</h3>
+        </footer>
+
+        <script src="{% static 'shop/home.js' %}"></script>
+      </body>
+
+{% endblock %}

@@ -1,0 +1,423 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+#section1 {
+    padding: 0 35px;
+    color: #fff; 
+    background-color: #47297B; 
+    font-size: large;
+    height:480px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section2 {
+    padding: 0 35px;
+    height:480px;
+    color: #47297B; 
+    background-color: #fff; 
+    font-size: large;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section3 {
+    padding:170px 35px; 
+    height: 480px;
+    color: #fff; 
+    background-color: #47297B; 
+    font-size: large;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section41 {
+    padding: 170px 35px;
+    height:500px;
+    color: #47297B; 
+    background-color: #fff; 
+    font-size: large;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section42 {
+    padding:150px 35px; 
+    height:600px;
+    color: #fff; 
+    background-color: #47297B; 
+    font-size: large;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.seebord {
+    border: 1px solid red;
+}
+
+.navul {
+    text-align: center;
+    margin: auto;
+    font-size: 16px;
+}
+
+.slide {
+    top: -20px;
+    margin-bottom: -20px;
+}
+
+.slides {
+    height: 500px;
+    position: relative;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+ 
+.scrollednav {
+    background-color: #fff  ;
+    font-size: 15px;
+    font-weight: bold;
+    border: #47297B;
+    text-align: center;
+    
+}
+
+/*
+@media (min-width: 350px) and (max-width: 550px) {
+
+    #section1 {
+        height:480px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #section2 {
+        padding:120px 38px;
+        height:480px;
+    }
+    #section3 {
+        padding:110px 38px;
+        height:480px;
+    }
+    #section41 {
+        padding: 170 38px;
+        height:480px;
+    }
+    #section42 {
+        padding:150px 38px; 
+        height:600px;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 560px) {
+    #section42 {
+        padding:140px 38px; 
+        height:500px;
+    }
+}
+*/
+@media screen and (max-width: 450px) {
+    #secnav li {
+        padding: 0;
+    }
+
+    #secnav li a {
+        padding: 7px;
+
+    } 
+}
+
+/*
+@media screen and (max-width: 295px) {
+    #section1 {
+        padding:100px 30px;
+        height:480px;
+    }
+    #section2 {
+        padding:83px 30px;
+        height:480px;
+    }
+    #section3 {
+        padding:100px 30px;
+        height:480px;
+    }
+    #section41 {
+        padding: 100px 30px;
+        height:480px;
+    }
+    #section42 {
+        height: 650px;
+        padding: 99px 30px;
+    }
+}
+*/
+
+@media screen and (max-width: 379px) {
+    #secnav li {
+        padding: 0;
+    }
+
+    #secnav li a {
+        padding: 9px;
+        margin: auto;
+    }
+    #secnav {
+        text-align: center;
+        margin: auto;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.navvedbbar {
+    background-color: #47297B;
+}
+
+.nav-item a {
+    padding: 0 !important;
+    margin: 0px 10px;
+    color: white !important;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #47297B;
+    color: white !important;
+}
+
+.navdiv {
+    height: 500px;
+}
+
+.caption {
+    margin: auto;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.vert {
+    display: inline-block;
+}
+
+@media screen and (max-width: 772px) {
+    .disappear {
+        display: none;
+    }
+
+    .vert li{
+        display: inline-block;
+    }
+
+    .slides {
+        height: 350px;
+        position: relative;
+    }
+
+    .navdiv {
+        height: 350px;
+    }
+
+} 
+
+.content {
+    margin-top: -20px;
+    text-align: center;
+    font-family: 'Itim', cursive;
+}
+
+@media screen and (max-width: 300px) {
+    .slides img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+}
+
+.firstnav li a {
+    color: #ff9800;
+}
+
+#secnav li a {
+    color: #47297B;
+}
+
+.ending {
+    background-color: #47297B;
+    border: 2px solid #47297B;
+    height: 500px;
+    text-align: center;
+    padding: 40px 0px;
+    padding-top: 60px;
+    padding-bottom: 0px !important;
+    border: 2px solid white;
+    font-weight: 700px;
+}
+
+.ending img {
+    border: 1px solid pink;
+    display: block;
+    margin: auto;
+}
+
+#itemlist {
+    width: 100%;
+    font-size: 18px;
+    display: inline-flex;
+    justify-content: space-around;
+}
+
+#itemul {
+    list-style: none;
+    color: #fff;
+    margin: 50px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact span {
+    margin: 5px;
+}
+
+.goods {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.equal {
+    width: 40px;
+    display: inline-block;
+}
+
+.ictop {
+    position: relative;
+    top: -18%;
+}
+
+.icnorm {
+    margin-left: -4%;
+    position: relative;
+    bottom: -15%;
+}
+
+.ending h3 {
+    margin-top: 40px;
+    color: white;
+}
+
+@media screen and (min-width: 700px) {
+    .goods {
+        margin-left: -20px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .ending {
+        padding-top: 37px;
+        padding-bottom: 0px !important;
+        height: 550px;
+    }
+
+    #itemlist {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    #itemul {
+        margin: 20px 0;
+        margin-bottom: 10px;
+    }
+
+    .ending h3 {
+        margin-top: 20px;
+    }
+    
+    .contact li {
+        margin-left: 12px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 550px) {
+
+    .ending {
+        padding-top: 50px;
+        padding-bottom: 0px !important;
+    }
+
+    .ending h3 {
+        margin-top: 50px;
+    }
+
+    #itemul {
+        margin: 20px 0;
+    }
+
+    .goods {
+        margin-left: -30px !important;
+    }
+
+    #itemlist {
+        margin: 28px 0;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .ending {
+        height: 570px;
+        padding-top: 30px;
+        padding-bottom: 0px !important;
+    }
+
+    #itemul {
+        width: 100%;
+    }
+
+    #itemul li {
+        margin-left: -20px;
+    }
+
+    .contact li {
+        margin-left: -5px !important;
+    }
+}

@@ -1,0 +1,259 @@
+{% extends 'basepage.html' %}
+
+{% block styles %}
+    {% load static %}
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+      body {
+        position: relative;
+        font-family: 'Balsamiq Sans', cursive;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .navvedbbar {
+        background-color: #47297B;
+        margin-bottom: 0 !important;
+      }
+
+      .vert {
+        display: inline-block;
+      }
+
+      .navul {
+        text-align: center;
+        margin: auto;
+        font-size: 16px;
+      }
+
+      .firstnav li a {
+        color: #ff9800;
+      }
+
+      .nav-item a {
+        padding: 0 !important;
+        margin: 0px 10px;
+        color: white !important;
+        font-size: smaller;
+        font-weight: bold;
+      }
+
+      .ending {
+        background-color: #47297B;
+        border: 2px solid #47297B;
+        height: 500px;
+        text-align: center;
+        padding: 40px 0px;
+        padding-top: 60px;
+        padding-bottom: 0px !important;
+        border: 2px solid white;
+        font-weight: 700px;
+      }
+
+      .ending img {
+        border: 1px solid pink;
+        display: block;
+        margin: auto;
+      }
+
+      #itemlist {
+        width: 100%;
+        font-size: 18px;
+        display: inline-flex;
+        justify-content: space-around;
+      }
+
+      #itemul {
+        list-style: none;
+        color: #fff;
+        margin: 50px;
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .contact span {
+        margin: 5px;
+      }
+
+      .goods {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .equal {
+        width: 40px;
+        display: inline-block;
+      }
+
+      .ictop {
+        position: relative;
+        top: -18%;
+      }
+
+      .icnorm {
+        margin-left: -4%;
+        position: relative;
+        bottom: -15%;
+      }
+
+      .ending h3 {
+        margin-top: 40px;
+        color: white;
+      }
+
+      @media screen and (min-width: 700px) {
+        .goods {
+            margin-left: -20px !important;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+
+        .ending {
+            padding-top: 37px;
+            padding-bottom: 0px !important;
+            height: 550px;
+        }
+
+        #itemlist {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+
+        #itemul {
+            margin: 20px 0;
+            margin-bottom: 10px;
+        }
+
+        .ending h3 {
+            margin-top: 20px;
+        }
+        
+        .contact li {
+            margin-left: 12px;
+        }
+      }
+
+      @media (min-width: 500px) and (max-width: 550px) {
+
+        .ending {
+            padding-top: 50px;
+            padding-bottom: 0px !important;
+        }
+
+        .ending h3 {
+            margin-top: 50px;
+        }
+
+        #itemul {
+            margin: 20px 0;
+        }
+
+        .goods {
+            margin-left: -30px !important;
+        }
+
+        #itemlist {
+            margin: 28px 0;
+        }
+      }
+
+      @media screen and (max-width: 300px) {
+        .ending {
+            height: 570px;
+            padding-top: 30px;
+            padding-bottom: 0px !important;
+        }
+
+        #itemul {
+            width: 100%;
+        }
+
+        #itemul li {
+            margin-left: -20px;
+        }
+
+        .contact li {
+            margin-left: -5px !important;
+        }
+      }
+    </style>
+{% endblock %}
+
+{% block unloggednav %}
+    <div>
+          <nav class="navbar navbar-expand-sm navbar-light navvedbbar justify-content-center">
+            <div>
+              <div class="container-fluid" id="myNavbar">
+                <ul class="nav navbar-nav vert navul firstnav">
+                  <li class="nav-item"><a href="{% url 'home_page' %}">Home</a></li>
+                  <li class="nav-item"><a href="{% url 'shop_home' %}">Shop</a></li>
+                  <li class="nav-item"><a class="logonav" href=""><img src="{% static 'shop/images/20210415_182733_0000 24.png' %}"></a></li>
+                  <li class="nav-item"><a href="">Account</a></li>
+                  <li class="nav-item"><a href="">Golden Cart</a></li>
+                </ul>
+              </div>
+            </div>
+
+             <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+          </nav>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+  <footer class="ending">
+          <img src="{% static 'shop/images/20210415_182733_0000 21.png' %}">
+        <div id="alldiv">
+          <div id="itemlist">
+            <ul class="goods" id="itemul">
+              <li>
+                <div class="equal"><i class="fas fa-laptop-house"></i></div>
+                <span></span>Home Appliances</li>
+              <li>
+                <div class="equal"><i class="far fa-building"></i></div>
+                <span></span>Office Appliances</li>
+              <li>
+                <div class="equal"><i class="far fa-file-code"></i></div>
+                <span></span>Developer Tools</li>
+              <li>
+                <div class="equal"><i class="fas fa-mobile-alt"></i></div>
+                <span></span>Mobile Phones and Tablets</li>
+              <li>
+                <div class="equal"><i class="fas fa-desktop"></i></div>
+                <span></span>Desktops and Laptops</li>
+                <li>
+                  <div class="equal">
+                    <i class="fas fa-tools ictop fa-xs" data-fa-transform="up-6"></i>
+                    <i class="fas fa-mobile-alt icnorm"></i>
+                  </div>
+                  <span></span>Refurbished Products
+                </li>
+            </ul>
+            <ul class="contact" id="itemul">
+              <li><i class="fa fa-twitter" aria-hidden="true"></i><span></span>Twitter</li>
+              <li><i class="fab fa-discord"></i><span></span>Discord</li>
+              <li><i class="far fa-paper-plane"></i><span></span>Email</li>
+              <li><i class="fab fa-github"></i><span></span>Github</li>
+            </ul>
+          </div>
+        </div>
+        <h3>Copyright - CartIt International</h3>
+        </footer>
+{% endblock %}-->
