@@ -172,3 +172,7 @@ body, html {
 .collapse.in {
     display: block !important;
 }
+
+.navcontent {
+    border: 5px solid red;
+}
