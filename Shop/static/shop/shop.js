@@ -29,11 +29,25 @@ function closeNav() {
 
 /* Open when someone clicks on the span element */
 function openMobileNav() {
-  document.getElementById("myNav").style.width = "100%";
+  var mobilenav = document.getElementById("myNav")
+  var offsetValue = document.getElementById("navid").offsetHeight + "px"
+  // document.body.classList.add("stop_scrolling");
+  // mobilenav.style.top = offsetValue
+  if (window.innerWidth < 600) {
+    mobilenav.style.width = "100%";
+    
+  }
+  if (window.innerWidth >= 600 && window.innerWidth < 1000) {
+    document.getElementById("myNav").style.width = "60%";
+    document.getElementById("laptent")
+  }
+  if (window.innerWidth >= 1000) {
+    document.getElementById("myNav").style.width = "35%";
+  }
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeMobileNav() {
   document.getElementById("myNav").style.width = "0%";
+  document.body.classList.remove("stop_scrolling")
 }
- 

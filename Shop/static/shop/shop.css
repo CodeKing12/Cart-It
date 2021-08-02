@@ -110,15 +110,15 @@ body, html {
     }
 }
 
-@media screen and (max-width: 650px) {
-    .lapshow {
-        /*display: none;*/
+@media screen and (max-width: 600px) {
+    .lapcontainer {
+        display: none;
     }
 }
 
-@media screen and (min-width: 651px) {
+@media screen and (min-width: 601px) {
     .mobileshow {
-        /*display: none;*/
+        display: none;
     }
 }
 
@@ -287,4 +287,9 @@ body, html {
         height: 80px;
         width: 80px;
     }
+}
+
+.stop_scrolling {
+    height: 100%;
+    overflow: hidden;
 }
