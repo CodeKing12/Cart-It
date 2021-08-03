@@ -76,38 +76,13 @@ body, html {
     .mobilenav a {font-size: 18px;}
 }
 
-.lapnav {
-    width: 200px;
-    height: 100%;
-    border: 1px solid #522882;
-    float: left;
-}
-
-.lapcontent {
-    margin-left: 202px;
-    border: 1px solid #522882;
-    
-}
-
-.lapnav a, .mobilenav a {
+.mobilenav a {
     display: block;
     width: 100%;
 }
 
 .lapshow {
     border: 1px solid #522882;
-}
-
-
-@media (min-width: 530px) and (max-width: 770px) {
-    .lapnav {
-        width: 25%;
-    }
-
-    .lapcontent {
-        width: 74%;
-        margin-left: 25%;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -135,6 +110,12 @@ body, html {
     background-color: rgba(71,41,123, 0.7); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+@media screen and (min-width: 601px) {
+    .mobilenav {
+
+    }
 }
 
 .navcontent {
@@ -253,7 +234,7 @@ body, html {
     }
 }
 
-@media (min-width: 400px) and (max-width: 550px) {
+@media screen and (min-width: 400px) {
     .item-card {
         width: 130px;
         margin-right: 10px;
