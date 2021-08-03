@@ -1,9 +1,12 @@
 // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {
+  myFunction();
+  stayThere()
+};
 
 // Get the navbar
 var navbar = document.getElementById("mobilestick");
-
+var items = document.getElementById("lapgoods")
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
 var mobilenav = document.getElementById("myNav")
@@ -16,9 +19,11 @@ function myFunction() {
   } else {
     navbar.classList.remove("sticky");
   }
-
 } 
-
+/*
+function stayThere() {
+  if (window.pageYOffset < sticky)
+}*/
 
 function openNav() {
   document.getElementById("mySidebar").style.width = "150px";
@@ -35,7 +40,7 @@ function openMobileNav() {
   var distanceFromTop = navbar.offsetTop
   var distanceFromWindowTop = window.pageYOffset
   var offtop = distanceFromTop - distanceFromWindowTop 
-  
+
   if (window.innerWidth < 300) {
     if (window.pageYOffset >= sticky) {
       mobilenav.style.width = "100%";
@@ -65,22 +70,25 @@ function openMobileNav() {
   }
   if (window.innerWidth >= 600 && window.innerWidth < 1000) {
     if (window.pageYOffset >= sticky) {
-      mobilenav.style.width = "50%";
+      mobilenav.style.width = "44%";
       mobilenav.style.top = "40px";
+      document.body.classList.add("stop_scrolling");
+      
     } else {
       window.scrollTo(0, distanceFromTop+5)
-      mobilenav.style.width = "50%";
+      mobilenav.style.width = "44%";
       mobilenav.style.top = "40px";
+      document.body.classList.add("stop_scrolling");
     }
   }
   if (window.innerWidth >= 1000) {
     if (window.pageYOffset >= sticky) {
-      mobilenav.style.width = "40%";
+      mobilenav.style.width = "30%";
       mobilenav.style.top = "40px";
       document.body.classList.add("stop_scrolling");
     } else {
       window.scrollTo(0, 513)
-      mobilenav.style.width = "40%";
+      mobilenav.style.width = "30%";
       mobilenav.style.top = "40px";
       document.body.classList.add("stop_scrolling");
     }
