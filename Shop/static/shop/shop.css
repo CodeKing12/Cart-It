@@ -188,7 +188,7 @@ body, html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 .item-card {
@@ -223,7 +223,7 @@ body, html {
 
 @media screen and (max-width: 300px) {
     .item-card {
-        width: 80px;
+        width: 130px;
         margin-right: 15px;
         margin-left: 15px;
         border: 1px solid #47297B;
@@ -239,13 +239,13 @@ body, html {
     }
 
     .img_holder {
-        height: 70px;
-        width: 70px;
+        height: 120px;
+        width: 120px;
     }
     
     .img_holder img {
-        height: 70px;
-        width: 70px;
+        height: 120px;
+        width: 120px;
     }
 }
 
@@ -268,6 +268,10 @@ body, html {
 }
 
 @media (min-width: 451px) {
+    .goods {
+        padding-left: 19px;
+    }
+
     .item-card {
         width: 160px;
         margin-right: 10px;
@@ -287,19 +291,19 @@ body, html {
 
 @media (min-width: 300px) and (max-width: 399px) {
     .item-card {
-        width: 90px;
+        width: 130px;
         margin-left: 10px;    
         margin-right: 10px;
     }
 
     .img_holder {
-        height: 80px;
-        width: 80px;
+        height: 120px;
+        width: 120px;
     }
     
     .img_holder img {
-        height: 80px;
-        width: 80px;
+        height: 120px;
+        width: 120px;
     }
 }
 
