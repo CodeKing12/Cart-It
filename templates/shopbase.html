@@ -27,7 +27,7 @@
 
       .navul {
         text-align: center;
-        margin: auto;
+        margin: 0 auto;
         font-size: 16px;
       }
 
@@ -39,8 +39,14 @@
         padding: 0 !important;
         margin: 0px 10px;
         color: white !important;
-        font-size: smaller;
+        font-size: 15px;
         font-weight: bold;
+      }
+
+      @media screen and (min-width: 560px) {
+        .navwords {
+          margin-top: 10px;
+        }
       }
 
       .ending {
@@ -198,11 +204,11 @@
             <div>
               <div class="container-fluid" id="myNavbar">
                 <ul class="nav navbar-nav vert navul firstnav">
-                  <li class="nav-item"><a href="{% url 'home_page' %}">Home</a></li>
-                  <li class="nav-item"><a href="{% url 'shop_home' %}">Shop</a></li>
+                  <li class="nav-item navwords"><a href="{% url 'home_page' %}">Home</a></li>
+                  <li class="nav-item navwords"><a href="{% url 'shop_home' %}">Shop</a></li>
                   <li class="nav-item"><a class="logonav" href=""><img src="{% static 'shop/images/20210415_182733_0000 24.png' %}"></a></li>
-                  <li class="nav-item"><a href="">Account</a></li>
-                  <li class="nav-item"><a href="">Golden Cart</a></li>
+                  <li class="nav-item navwords"><a href="">Account</a></li>
+                  <li class="nav-item navwords"><a href="">Golden Cart</a></li>
                 </ul>
               </div>
             </div>

@@ -58,38 +58,38 @@ function openMobileNav() {
   // mobilenav.style.top = offsetValue
   if (window.innerWidth < 600 && window.innerWidth > 300) {
     if (window.pageYOffset >= sticky) {
-      mobilenav.style.width = "100%";
-      mobilenav.style.top = "40px";
+      mobilenav.style.width = "70%";
+      mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     } else {
       window.scrollTo(0, distanceFromTop)
-      mobilenav.style.width = "100%";
-      mobilenav.style.top = "40px";
+      mobilenav.style.width = "70%";
+      mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     }
   }
-  if (window.innerWidth >= 600 && window.innerWidth < 1000) {
+  if (window.innerWidth >= 600 && window.innerWidth < 1300) {
     if (window.pageYOffset >= sticky) {
-      mobilenav.style.width = "44%";
+      mobilenav.style.width = "50%";
       mobilenav.style.top = "40px";
       document.body.classList.add("stop_scrolling");
       
     } else {
       window.scrollTo(0, distanceFromTop+5)
-      mobilenav.style.width = "44%";
+      mobilenav.style.width = "50%";
       mobilenav.style.top = "40px";
       document.body.classList.add("stop_scrolling");
     }
   }
-  if (window.innerWidth >= 1000) {
+  if (window.innerWidth >= 1300) {
     if (window.pageYOffset >= sticky) {
       mobilenav.style.width = "30%";
-      mobilenav.style.top = "40px";
+      mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     } else {
       window.scrollTo(0, 513)
       mobilenav.style.width = "30%";
-      mobilenav.style.top = "40px";
+      mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     }
   }
