@@ -1,7 +1,6 @@
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {
   myFunction();
-  stayThere()
 };
 
 // Get the navbar
@@ -58,17 +57,17 @@ function openMobileNav() {
   // mobilenav.style.top = offsetValue
   if (window.innerWidth < 600 && window.innerWidth > 300) {
     if (window.pageYOffset >= sticky) {
-      mobilenav.style.width = "70%";
+      mobilenav.style.width = "100%";
       mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     } else {
       window.scrollTo(0, distanceFromTop)
-      mobilenav.style.width = "70%";
+      mobilenav.style.width = "100%";
       mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     }
   }
-  if (window.innerWidth >= 600 && window.innerWidth < 1300) {
+  if (window.innerWidth >= 600 && window.innerWidth < 1000) {
     if (window.pageYOffset >= sticky) {
       mobilenav.style.width = "50%";
       mobilenav.style.top = "40px";
@@ -81,13 +80,13 @@ function openMobileNav() {
       document.body.classList.add("stop_scrolling");
     }
   }
-  if (window.innerWidth >= 1300) {
+  if (window.innerWidth >= 1000) {
     if (window.pageYOffset >= sticky) {
       mobilenav.style.width = "30%";
       mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     } else {
-      window.scrollTo(0, 513)
+      window.scrollTo(0, distanceFromTop+5)
       mobilenav.style.width = "30%";
       mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
