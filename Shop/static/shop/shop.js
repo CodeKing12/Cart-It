@@ -69,14 +69,14 @@ function openMobileNav() {
   }
   if (window.innerWidth >= 600 && window.innerWidth < 1000) {
     if (window.pageYOffset >= sticky) {
-      mobilenav.style.width = "50%";
-      mobilenav.style.top = "40px";
+      mobilenav.style.width = "60%";
+      mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
       
     } else {
       window.scrollTo(0, distanceFromTop+5)
-      mobilenav.style.width = "50%";
-      mobilenav.style.top = "40px";
+      mobilenav.style.width = "60%";
+      mobilenav.style.top = "30px";
       document.body.classList.add("stop_scrolling");
     }
   }

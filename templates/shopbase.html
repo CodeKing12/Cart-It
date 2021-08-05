@@ -49,6 +49,22 @@
         }
       }
 
+      .vert {
+          display: inline-block;
+      }
+
+      @media screen and (max-width: 772px) {
+          .vert li{
+              display: inline-block;
+          }
+      }
+
+      .navul {
+          text-align: center;
+          margin: auto;
+          font-size: 15px;
+      }
+
       .ending {
         background-color: #47297B;
         border: 2px solid #47297B;
@@ -204,6 +220,29 @@
 {% endblock %}
 
 {% block unloggednav %}
+    <div>
+          <nav class="navbar navbar-expand-sm navbar-light navvedbbar justify-content-center" id="navid">
+            <div>
+              <div class="container-fluid" id="myNavbar">
+                <ul class="nav navbar-nav vert navul firstnav">
+                  <li class="nav-item navwords"><a href="{% url 'home_page' %}">Home</a></li>
+                  <li class="nav-item navwords"><a href="{% url 'shop_home' %}">Shop</a></li>
+                  <li class="nav-item"><a class="logonav" href=""><img src="{% static 'shop/images/20210415_182733_0000 24.png' %}"></a></li>
+                  <li class="nav-item navwords"><a href="">Account</a></li>
+                  <li class="nav-item navwords"><a href="">Golden Cart</a></li>
+                </ul>
+              </div>
+            </div>
+
+             <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+          </nav>
+{% endblock %}
+
+{% block loggednav %}
     <div>
           <nav class="navbar navbar-expand-sm navbar-light navvedbbar justify-content-center" id="navid">
             <div>
