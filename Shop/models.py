@@ -21,3 +21,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class PostImages(models.Model):
+    post = models.ForeignKey(Product, default=None, on_delete=models.CASCADE)
+    images = models.FileField(upload_to="uploaded_images/")

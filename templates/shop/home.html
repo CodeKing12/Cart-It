@@ -128,7 +128,7 @@
           </span>
           <h3>{{ product.name }}</h1>
           <p>{{ product.product_info | safe }}</p>
-          <button><a href="">Buy</a></button>
+          <button><a href="{% url 'product_details' product.id %}">Buy</a></button>
         </div>
       {% endfor %}
     </div>
@@ -145,7 +145,7 @@
           </span>
           <h3>{{ product.name }}</h1>
           <p>{{ product.product_info | safe }}</p>
-          <button><a href="">Buy</a></button>
+          <button><a href="{% url 'product_details' product.id %}">Buy</a></button>
         </div>
       {% endfor %}
     </div>
