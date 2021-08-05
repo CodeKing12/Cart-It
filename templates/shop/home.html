@@ -128,11 +128,7 @@
           </span>
           <h3>{{ product.name }}</h1>
           <p>{{ product.product_info | safe }}</p>
-<<<<<<< HEAD
-          <button><a href="{% url 'product_detals:product.id' %}">Buy</a></button>
-=======
           <button><a href="{% url 'product_details' product.id %}">Buy</a></button>
->>>>>>> NewPageBranch
         </div>
       {% endfor %}
     </div>

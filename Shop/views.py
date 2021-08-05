@@ -15,11 +15,6 @@ def category_items(request, categories):
     category_list = Product.objects.filter(category=cid)
     return render(request, "shop/category_products.html", {"category_list": category_list})
 
-
-def product_details(request, product_info):
-    product = Product.objects.get(pk=product_info)
-    return render(request, "shop/product_info.html", {"product": product})
-
 def product_details(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product_images = PostImages.objects.filter(post=product)
