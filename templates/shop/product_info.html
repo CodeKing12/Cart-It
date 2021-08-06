@@ -7,9 +7,9 @@
 
 {% block content %}
     <div class="slideshow-container">
-        {% for image in product_images %}
+        {% for product_image in product_images %}
             <div class="product_slides">
-                <img src="{{ image }}">
+                <img src="{{ product_image.images.url }}">
                 <!-- Insert image description in your model if need be -->
             </div>
         {% empty %}
