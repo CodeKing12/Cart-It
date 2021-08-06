@@ -127,7 +127,7 @@
             <img src="{{ product.id_image.url }}">
           </span>
           <h3>{{ product.name }}</h1>
-          <p>{{ product.product_info | safe }}</p>
+          <h4>&#8358;{{ product.price }}</p>
           <button><a href="{% url 'product_details' product.id %}">Buy</a></button>
         </div>
       {% endfor %}

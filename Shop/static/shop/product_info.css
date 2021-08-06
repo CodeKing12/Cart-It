@@ -3,9 +3,8 @@
 }
 
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+    width: 100%;
+    height: 550px;
 }
 
 .product_slides {
@@ -15,11 +14,11 @@
 .next, .prev {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 33%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
@@ -30,4 +29,35 @@
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
+}
+
+.slide_markers {
+    height: 17px;
+    width: 17px;
+    position: relative;
+    left: 50%;
+    margin: 5px 20px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.product_slides img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 950px) {
+    .product_slides img {
+        width: 75%;
+        height: 500px;
+        object-fit: contain;
+        margin: 5px auto;
+        display: block;
+    }
 }
