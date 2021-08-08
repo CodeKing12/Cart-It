@@ -9,14 +9,15 @@
 
 .product_slides {
     display: none;
+    margin-bottom: 15px;
 }
 
 .next, .prev {
     cursor: pointer;
     position: absolute;
-    top: 33%;
+    top: 25%;
     width: auto;
-    margin-top: -22px;
+    margin-top: 0px;
     padding: 16px;
     color: black;
     font-weight: bold;
@@ -36,7 +37,7 @@
     width: 17px;
     position: relative;
     left: 50%;
-    margin: 5px 20px;
+    margin: 0 20px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
