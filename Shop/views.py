@@ -10,10 +10,11 @@ def shophome(request):
     return render(request, 'shop/home.html', context=context)
 
 def category_items(request, categories):
+    all_categories = Categories.objects.all()
     cat_id = Categories.objects.get(categories=categories)
     cid = cat_id.id
     category_list = Product.objects.filter(category=cid)
-    return render(request, "shop/category_products.html", {"category_list": category_list})
+    return render(request, "shop/category_products.html", {"category_list": category_list, "categories": all_categories})
 
 def product_details(request, product_id):
     product = get_object_or_404(Product, pk=product_id)

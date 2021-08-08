@@ -1,7 +1,76 @@
-{% extends 'basepage.html' %}
+{% extends 'shopbase.html' %}
+
+{% block styling %}
+  {% load static %}
+  <link href="{% static 'shop/shop.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block content %}
-    {% for product in category_list %}
-        <h3>{{ product.name }}</h3>
-    {% endfor %}
+  <div class="hero-image" id="banner-img">
+    <div class="hero-text">
+      <h1>You're Welcome to our Prestiged Shop</h1><br>
+      <p>What would you like to buy?</p>
+    </div>
+  </div>
+  <div id="myNav" class="mobilenav">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="navcontent">
+          <ul class="shopnav">
+            {% for category in categories %}
+              <li href="#" class="nav-item">
+                <h3><a href="{% url 'category_items' category %}">{{ category.category_icons | safe }} {{ category }}</a></h3>
+              </li>
+            {% endfor %} 
+          </ul>
+      </div>
+    </div>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <div class="navstrip" id="mobilestick">
+      <a href="javascript:void(0)" onclick="openMobileNav()" class="open_button">&#9780</a> <h3>CartIT</h3>
+    </div>
+
+  <div class="lapcontainer" id="lapgoods">
+    <div class="lapnav">
+      
+    </div>
+    <div class="goods lapit" id="">
+      {% for product in category_list %}
+        <div class="item-card">
+          <span class="img_holder">
+            <img src="{{ product.id_image.url }}">
+          </span>
+          <h3>{{ product.name }}</h1>
+          <h4>&#8358;{{ product.price }}</p>
+          <button><a href="{% url 'product_details' product.id %}">Buy</a></button>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="mobileshow lapshow">
+    <!-- The overlay -->
+    
+
+    <div class="goods" class="lapcontent" id="laptent">
+      {% for product in category_list %}
+        <div class="item-card">
+          <span class="img_holder">
+            <img src="{{ product.id_image.url }}">
+          </span>
+          <h3>{{ product.name }}</h1>
+          <p>{{ product.product_info | safe }}</p>
+          <button><a href="{% url 'product_details' product.id %}">Buy</a></button>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% block js %}
+    <script src="{% static 'shop/shop.js' %}">
+  {% endblock %}
+
 {% endblock %}
