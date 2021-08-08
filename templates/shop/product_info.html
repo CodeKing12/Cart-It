@@ -13,13 +13,15 @@
                 <!-- Insert image description in your model if need be -->
             </div>
         {% empty %}
-            <h1>No Image</h1>
+            <img src="{{ product.id_image.url }}" class="slideless_img">
         {% endfor %}
-        <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
-        <a class="next" onclick="nextSlide(1)">&#10095;</a>
-        {% for image in product_images %}
-            <span class="slide_markers">
-        {% endfor %}
+        {% if product_images %}
+            <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+            <a class="next" onclick="nextSlide(1)">&#10095;</a>
+            {% for image in product_images %}
+                <span class="slide_markers">
+            {% endfor %}
+        {% endif %}
     </div>
     <div class="product_dets">
         <h3>Product Description</h3>

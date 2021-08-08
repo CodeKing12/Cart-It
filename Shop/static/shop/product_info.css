@@ -19,12 +19,20 @@
     width: auto;
     margin-top: 0px;
     padding: 16px;
-    color: black;
+    color: #47297B;
+    background-color: rgba(71,41,123, 0.4);
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+}
+
+.next:hover, .prev:hover {
+    background-color: rgba(71,41,123, 0.8);
+    color: #bca6e2;
+    transition-delay: 0s;
+    transition: 0.5s;
 }
 
 .next {
@@ -38,19 +46,23 @@
     position: relative;
     left: 42%;
     margin: 0 20px;
-    background-color: #bbb;
+    background-color: #aa87e7;
     border-radius: 50%;
     display: inline-block;
 }
 
 .active {
-    background-color: #717171;
+    background-color: #47297B;
 }
 
 .product_slides img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
+}
+
+.slideless_img {
+    top: 60%;
 }
 
 @media screen and (min-width: 950px) {
