@@ -22,7 +22,8 @@
         {% endfor %}
     </div>
     <div class="product_dets">
-        <h4>Product Description</h4>
+        <h3>Product Description</h3>
+        {{ product.product_info | safe }}
     </div>
 {% endblock %}
 

@@ -16,7 +16,7 @@ class Product(models.Model):
     name = models.CharField(max_length=120)
     price = models.FloatField()
     id_image = models.ImageField(blank=True, upload_to="uploaded_images/")
-    product_info = RichTextUploadingField()
+    product_info = RichTextField()
     category = models.ManyToManyField(Categories)
 
     def __str__(self):
