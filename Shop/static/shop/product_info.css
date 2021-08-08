@@ -61,8 +61,14 @@
     object-fit: cover;
 }
 
+.prodimage {
+    display: flex;
+}
+
 .slideless_img {
-    top: 60%;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 5px auto;
 }
 
 @media screen and (min-width: 950px) {

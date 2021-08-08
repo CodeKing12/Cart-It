@@ -6,23 +6,28 @@
 {% endblock %}
 
 {% block content %}
-    <div class="slideshow-container">
-        {% for product_image in product_images %}
-            <div class="product_slides">
-                <img src="{{ product_image.images.url }}">
-                <!-- Insert image description in your model if need be -->
-            </div>
-        {% empty %}
-            <img src="{{ product.id_image.url }}" class="slideless_img">
-        {% endfor %}
-        {% if product_images %}
-            <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
-            <a class="next" onclick="nextSlide(1)">&#10095;</a>
-            {% for image in product_images %}
-                <span class="slide_markers">
+    {% if product_images %}
+        <div class="slideshow-container">
+            {% for product_image in product_images %}
+                <div class="product_slides">
+                    <img src="{{ product_image.images.url }}">
+                    <!-- Insert image description in your model if need be -->
+                </div>
+            
             {% endfor %}
-        {% endif %}
-    </div>
+            {% if product_images %}
+                <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+                <a class="next" onclick="nextSlide(1)">&#10095;</a>
+                {% for image in product_images %}
+                    <span class="slide_markers">
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="prodimage">
+            <img src="{{ product.id_image.url }}" class="slideless_img">
+        </div>
+    {% endif %}
     <div class="product_dets">
         <h3>Product Description</h3>
         {{ product.product_info | safe }}
