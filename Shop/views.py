@@ -14,7 +14,7 @@ def category_items(request, categories):
     cat_id = Categories.objects.get(categories=categories)
     cid = cat_id.id
     category_list = Product.objects.filter(category=cid)
-    return render(request, "shop/category_products.html", {"category_list": category_list, "categories": all_categories})
+    return render(request, "shop/category_products.html", {"category_list": category_list, "categories": all_categories, "category": cat_id})
 
 def product_details(request, product_id):
     product = get_object_or_404(Product, pk=product_id)

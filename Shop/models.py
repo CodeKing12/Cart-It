@@ -4,8 +4,10 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 class Categories(models.Model):
+    description = RichTextField(blank=True)
     category_icons = models.CharField(blank=True, max_length=150)
     categories = models.CharField(max_length=60)
+    category_images = models.ImageField(blank=True, upload_to="uploaded_images/")
 
     def __str__(self):
         return self.categories

@@ -6,14 +6,14 @@
 {% endblock %}
 
 {% block content %}
-  <div class="hero-image" id="banner-img">
-    <div class="hero-text">
-      <h1>You're Welcome to our Prestiged Shop</h1><br>
-      <p>What would you like to buy?</p>
-    </div>
+  <div class="bannimage cfg">
+      <img src=" {{ category.category_images.url }}">
+      <section class="banner_text">
+          <h1>{{ category.description | safe }}</h1>
+      </section>
   </div>
+  
   <div id="myNav" class="mobilenav">
-
       <!-- Button to close the overlay navigation -->
       <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
 
