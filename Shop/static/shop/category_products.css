@@ -1,0 +1,345 @@
+body, html {
+    min-height: 100% !important;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#exception a:hover {
+    background-color: #47297B;
+}
+
+.vert {
+    display: inline-block;
+}
+
+@media screen and (max-width: 772px) {
+    .vert li{
+        display: inline-block;
+    }
+}
+
+.navul {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/20210415_181048_0000 1.png");
+    height: 450px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    /*border: 1px solid red;*/
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #73b635;
+    font-weight: bold;
+  }
+  
+  @media screen and (min-width: 750px) {
+      #banner-img {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/20210415_182733_0000.png");
+          background-size: cover;
+          background-position: center;
+          height: 570px;
+      }
+  
+  }
+
+@media screen and (max-width: 700px) {
+    #banner-img {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/20210415_170249_0001.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#mobilecontent {
+    transition: margin-left .5s; /* If you want a transition effect */
+  /*  padding: 0px 10px; */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the mobilenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .mobilenav {padding-top: 15px;}
+    .mobilenav a {font-size: 18px;}
+}
+
+.mobilenav a {
+    display: block;
+    width: 100%;
+    font-size: 23px;
+    margin: 30px 0;
+}
+
+.spacein {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .lapcontainer {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .mobileshow {
+        display: none;
+    }
+
+    .mobilenav {
+        background-color: rgba(71,41,123, 1); /* Black w/opacity */
+    }
+}
+
+.opague {
+    background-color: rgba(71,41,123, 0.9);
+}
+
+
+/* The Overlay (background) */
+.mobilenav {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 50px;
+    background-color: rgb(71,41,123); /* Black fallback color */
+    background-color: rgba(71,41,123, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+@media screen and (min-width: 601px) {
+    .mobilenav {
+        top: 50px;
+    }
+}
+
+.navcontent {
+    display: flex;
+    flex-direction: column;
+    font-size: 23px;
+    color: white;
+    align-items: center;
+    margin-top: 20px;
+    font-stretch: semi-expanded;
+    margin-left: -12px;
+}
+
+.closebtn {
+    font-size: 40px !important;
+    right: 0;
+    color: white;
+    margin-left: 20px !important;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 450px) {
+    
+} 
+
+.closebtn:hover {
+    color: #a52994;
+    
+}
+
+.shopnav {
+    list-style: none;
+}
+
+#dropdown-item {
+    color: black !important;
+    font-size: 20px;
+}
+
+.collapse.in {
+    display: block !important;
+}
+
+.navstrip {
+    width: 100%;
+    height: 40px;
+    font-size: 28px;
+    background-color: #47297B;
+    display: flex;
+}
+
+.open_button {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    color: white;
+    width: 40px;
+}
+
+.open_button:hover {
+    color: white;
+}
+
+.navstrip h3{
+    color: white;
+    margin-left: 35%;
+    margin-top: 6px;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-item a{
+    margin-bottom: 10px;
+}
+
+.goods {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5px;
+}
+
+.item-card {
+    width: 110px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 20px;
+    border: 1px solid #47297B;
+    border-bottom: 3px solid #47297B;
+    border-right: 3px solid#47297B;
+    flex: 1 1 auto;
+    transition: border 0.5s ease-out;
+}
+
+.item-card:hover {
+    border: 2px solid #47297B;
+    border-right: 5px solid #47297B;
+    border-bottom: 5px solid #47297B;
+}
+
+.img_holder {
+    height: 100px;
+    width: 100px;
+}
+
+.img_holder img {
+    height: 100px;
+    width: 100px;
+    object-fit:scale-down;
+    object-position: center;
+}
+
+
+@media screen and (max-width: 300px) {
+    .navcontent a {
+        font-size: 19px;
+    }
+
+    .navcontent {
+        margin-left: -15px;
+    }
+
+    .item-card {
+        width: 130px;
+        margin-right: 15px;
+        margin-left: 15px;
+        border: 1px solid #47297B;
+        border-bottom: 3px solid #47297B;
+        border-right: 3px solid#47297B;
+        transition: border 0.5s ease-out;
+    }
+
+    .item-card:hover {
+        border: 3px solid #47297B;
+        border-right: 5px solid #47297B;
+        border-bottom: 5px solid #47297B;
+    }
+
+    .img_holder {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .img_holder img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 450px) {
+    .item-card {
+        width: 130px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .img_holder {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .img_holder img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+@media (min-width: 451px) {
+    .goods {
+        padding-left: 19px;
+    }
+
+    .item-card {
+        width: 160px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .img_holder {
+        height: 150px;
+        width: 150px;
+    }
+    
+    .img_holder img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 399px) {
+    .item-card {
+        width: 130px;
+        margin-left: 10px;    
+        margin-right: 10px;
+    }
+
+    .img_holder {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .img_holder img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+.stop_scrolling {
+    height: 100%;
+    overflow: hidden;
+}
