@@ -46,10 +46,11 @@ body, html {
     overflow: hidden;
     text-align: center;
     position: relative;
+    height: 500px;
 }
 
 .bannimage img {
-    object-fit: contain;
+    object-fit: fill;
     opacity: 0.5;
     min-height: 100%;
     min-width: 100%;
@@ -62,6 +63,34 @@ body, html {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .bannimage {
+        height: 550px;
+    }
+
+    .bannimage img {
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .bannimage {
+        height: 600px;
+    }
+    
+    .bannimage img {
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bannimage {
+        height: 400px;
+    }
+
+    .bannimage img {
+        object-fit: cover;
     }
 }
 
