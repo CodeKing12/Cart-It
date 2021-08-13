@@ -210,6 +210,10 @@ a {
     color: white !important;
 }
 
+.navbar {
+    margin-bottom: 0;
+}
+
 .navdiv {
     height: 500px;
 }
@@ -270,6 +274,10 @@ a {
 
 .firstnav li a {
     color: #ff9800;
+}
+
+.nav-item a:hover {
+    color: #b394f1 !important;
 }
 
 #secnav li a {
@@ -419,5 +427,136 @@ a {
 
     .contact li {
         margin-left: -5px !important;
+    }
+}
+
+/* Beginning of slideshow code for CSS */
+
+.slideshow-container {
+    width: 100%;
+    height: 800px;
+}
+
+.product_slides {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.next, .prev {
+    cursor: pointer;
+    position: absolute;
+    top: 10%;
+    width: auto;
+    margin-top: 0px;
+    padding: 16px;
+    color: #c09ffa;
+    background-color: rgba(71,41,123, 0.76);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next:hover, .prev:hover {
+    background-color: rgba(77, 48, 126, 0.9);
+    color: #bca6e2;
+    transition-delay: 0s;
+    transition: 0.5s;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slide_markers {
+    height: 17px;
+    width: 17px;
+    position: relative;
+    left: 42%;
+    margin: 0 20px;
+    background-color: #aa87e7;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active {
+    background-color: #47297B;
+}
+
+.product_slides img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.prodimage {
+    display: flex;
+}
+
+.slideless_img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 5px auto;
+    background-color: #47297B;
+}
+
+@media screen and (min-width: 950px) {
+    .product_slides img {
+        width: 100%;
+        height: 755px;
+        object-fit: cover;
+        margin: 5px auto;
+        display: block;
+    }
+
+    .next, .prev {
+        top: 11%;
+    }
+
+    .slide_markers {
+        left: 50%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+    .slideshow-container {
+        width: 100%;
+        height: 545px;
+    }
+
+    .product_slides img {
+        height: 500px;
+        object-fit: cover;
+        margin: 5px auto;
+        display: block;
+    }
+
+    .next, .prev {
+        top: 7.5%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slideshow-container {
+        width: 100%;
+        height: 445px;
+    }
+
+    .product_slides img {
+        height: 400px;
+        object-fit: cover;
+        margin: 5px auto;
+        display: block;
+    }
+
+    .next, .prev {
+        top: 7%;
+    }
+
+    .slide_markers {
+        left: 37%;
     }
 }

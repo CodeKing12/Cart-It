@@ -28,44 +28,27 @@
               </form> -->
             </div>
           </nav>
-          <div id="carouselId" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators listremove">
-              <li data-target="#carouselId" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselId" data-slide-to="1"></li>
-              <li data-target="#carouselId" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner navdiv" role="listbox">
-              <div class="carousel-item active slides">
-                <img src="{% static 'shop/images/pexels-nataliya-vaitkevich-621 copy 4.jpg' %}" alt="First slide" class="img-responsive">
-                <div class="carousel-caption d-none d-md-block">
-                  <h3>Title</h3>
-                  <p>Description</p>
+          <div class="slideshow-container">
+                <div class="product_slides">
+                    <img src="{% static 'shop/images/pexels-nataliya-vaitkevich-621 copy 4.jpg' %}">
+                    <!-- Insert image description in your model if need be -->
                 </div>
-              </div>
-              <div class="carousel-item slides">
-                <img src="{% static 'shop/images/pexels-karolina-grabowska-5632382 3.jpg' %}" alt="Second slide" class="img-responsive">
-                <div>
-                  <h3>Title</h3>
-                  <p>Description</p>
+                <div class="product_slides">
+                    <img src="{% static 'shop/images/pexels-karolina-grabowska-5632382 3.jpg' %}">
+                    <!-- Insert image description in your model if need be -->
                 </div>
-              </div>
-              <div class="carousel-item slides">
-                <img src="{% static 'shop/images/pexels-karolina-grabowska-5632382 3334.jpg' %}" alt="Third slide" class="img-responsive">
-                <div class="carousel-caption d-none d-md-block">
-                  <h3>Title</h3>
-                  <p>Description</p>
+                <div class="product_slides">
+                    <img src="{% static 'shop/images/pexels-karolina-grabowska-5632382 3334.jpg' %}">
+                    <!-- Insert image description in your model if need be -->
                 </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselId" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>
+
+                <a class="prev" onclick="nextSlide(-1)">&#10094;</a>
+                <a class="next" onclick="nextSlide(1)">&#10095;</a>
+                <span class="slide_markers">
+                <span class="slide_markers">
+                <span class="slide_markers">
+
+          </div>
         <nav class="scrollednav navbar navbar-inverse fixit rounded-lg" id="sticknav">
           <div class="container-fluid">
             <div class="navbar-header disappear">
