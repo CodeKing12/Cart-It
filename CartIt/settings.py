@@ -39,8 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Shop.apps.ShopConfig',
+    'Accounts.apps.AccountsConfig',
     'ckeditor',
     'ckeditor_uploader',
+    'crispy_forms',
 ]
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
