@@ -89,6 +89,20 @@
     .slide_markers {
         left: 50%;
     }
+
+    .money_buttons {
+        border: 1px solid #47297B;
+        width: 30%;
+        margin-left: 14%;
+        height: 35px;
+        background-color: #47297B;
+        color: white;
+    }
+
+    .money_buttons:hover {
+        border-top: 4px solid #bca6e2;
+        border-left: 4px solid #bca6e2;
+    }
 }
 
 @media (min-width: 500px) and (max-width: 800px) {
@@ -106,6 +120,21 @@
 
     .next, .prev {
         top: 22%;
+    }
+
+    .money_buttons {
+        border: 1px solid #47297B;
+        width: 40%;
+        margin-left: 5.5%;
+        height: 35px;
+        background-color: #47297B;
+        color: white;
+        font-size: 17px;
+    }
+
+    .money_buttons:hover {
+        border-top: 4px solid #bca6e2;
+        border-left: 4px solid #bca6e2;
     }
 }
 
@@ -128,5 +157,20 @@
 
     .slide_markers {
         left: 37%;
+    }
+
+    .money_buttons {
+        border: 1px solid #47297B;
+        width: 40%;
+        margin-left: 5.5%;
+        height: 35px;
+        background-color: #47297B;
+        color: white;
+        font-size: 17px;
+    }
+
+    .money_buttons:hover {
+        border-top: 4px solid #bca6e2;
+        border-left: 4px solid #bca6e2;
     }
 }

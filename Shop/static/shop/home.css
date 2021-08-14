@@ -207,7 +207,7 @@ a {
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
     background-color: #47297B;
-    color: white !important;
+    color: white !important; 
 }
 
 .navbar {
@@ -278,6 +278,7 @@ a {
 
 .nav-item a:hover {
     color: #b394f1 !important;
+    background-color: #47297B important;
 }
 
 #secnav li a {
@@ -434,7 +435,7 @@ a {
 
 .slideshow-container {
     width: 100%;
-    height: 800px;
+    height: 545px;
 }
 
 .product_slides {
@@ -445,7 +446,7 @@ a {
 .next, .prev {
     cursor: pointer;
     position: absolute;
-    top: 10%;
+    top: 6.5%;
     width: auto;
     margin-top: 0px;
     padding: 16px;
@@ -499,21 +500,29 @@ a {
     max-width: 100%;
     max-height: 400px;
     object-fit: contain;
-    margin: 5px auto;
+    margin: 0 auto;
+    margin-bottom: 5px;
     background-color: #47297B;
 }
 
 @media screen and (min-width: 950px) {
+
+    .slideshow-container {
+        width: 100%;
+        height: 800px;
+    }
+
     .product_slides img {
         width: 100%;
         height: 755px;
         object-fit: cover;
-        margin: 5px auto;
+        margin: 0 auto;
+        margin-bottom: 5px;
         display: block;
     }
 
     .next, .prev {
-        top: 11%;
+        top: 8%;
     }
 
     .slide_markers {
@@ -530,7 +539,8 @@ a {
     .product_slides img {
         height: 500px;
         object-fit: cover;
-        margin: 5px auto;
+        margin: 0 auto;
+        margin-bottom: 5px;
         display: block;
     }
 
@@ -548,7 +558,8 @@ a {
     .product_slides img {
         height: 400px;
         object-fit: cover;
-        margin: 5px auto;
+        margin: 0 auto;
+        margin-bottom: 5px;
         display: block;
     }
 
