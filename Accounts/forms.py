@@ -1,12 +1,15 @@
 from django import forms
 from django.contrib.auth.forms import User, UserCreationForm
+import random
+import string
 
 class CreateAccountForm(UserCreationForm):
     first_name = forms.CharField(max_length=30)
     last_name = forms.CharField(max_length=30)
     email = forms.EmailField()
     phone_number = forms.CharField(max_length=30)
+    username = forms.CharField(max_length=20, initial="".join(random.choices(string.ascii_letters, k=12)))
 
     class Meta:
         model = User
-        fields = ["first_name", "last_name", "email", "password1", "password2", "phone_number"]
+        fields = ["first_name", "last_name", "username", "email", "password1", "password2", "phone_number"]

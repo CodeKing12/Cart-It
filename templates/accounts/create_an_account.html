@@ -1,13 +1,45 @@
 {% extends 'accounts_base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 
+{% block styling %}
+    <link href="{% static 'shop/create_an_account.css' %}" type="text/css" rel="stylesheet"></link>
+{% endblock %}
 
 {% block content %}
-    {% csrf_token %}
-    {{ create_form.first_name | as_crispy_field }}
-    {{ create_form.last_name | as_crispy_field }}
-    {{ create_form.email | as_crispy_field }}
-    {{ create_form.password1 | as_crispy_field }}
-    {{ create_form.password2 | as_crispy_field }}
-    {{ create_form.phone_number | as_crispy_field }}
+    <div class="creation_form">
+        <form method="POST" class="form">
+            {% csrf_token %}
+            <h4 class="surname">
+                <span class="block">First Name:</span> <span class="box">{{ create_form.first_name }}</span>
+            </h4>
+            <h4>
+                <span class="block">Last Name:</span> <span class="box">{{ create_form.last_name }}</span>
+            
+            <h4>
+                <span class="block">Email:</span> <span class="box">{{ create_form.email }}</span>
+            </h4>
+            <h4>
+                <span class="block">Password:</span> <span class="box">{{ create_form.password1 }}</span>
+                <ul>
+                    <li>Your password can’t be too similar to your other personal information.</li>
+                    <li>Your password must contain at least 8 characters.</li>
+                    <li>Your password can’t be a commonly used password.</li>
+                    <li>Your password can’t be entirely numeric.</li>
+                </ul>
+            </h4>
+            <h4>
+                <span class="block">Confirm Password:</span> <span class="box">{{ create_form.password2 }}</span>
+                <br>
+                Enter the same password as before, for verification.
+            </h4>
+            <h4>
+                <span class="block">Phone Number:</span> <span class="box">{{ create_form.phone_number }}</span>
+            </h4>
+            <h4>
+                <span class="block">Username:</span> <span class="box">{{ create_form.username }}</span>
+            </h4>
+            <button type="submit" >Register</buttton>
+        </form>
+    </div>
 {% endblock %}

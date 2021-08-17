@@ -1,0 +1,142 @@
+
+@media screen and (max-width: 500px) {
+    .creation_form {
+        margin-top: 30px;
+        width: fit-content;
+        padding-left: 15px;
+    }
+
+    .creation_form h4 {
+        width: 100%;
+        margin: 22px auto;
+        object-fit: contain;
+    }
+
+    .block {
+        display: block;
+        color: #260b53;
+    }
+
+    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number {
+        width: 75%;
+        height: 25px;
+        border: 1px dotted #47297B;
+        background-color: #47297B;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;    
+        font-stretch: ultra-expanded;
+    }
+
+    .creation_form * {
+/*        border: 1px solid red; */
+    }
+
+    .submit_form {
+        border: 1px solid #47297B;
+        background-color: #47297B;
+        height: 30px;
+        width: 90px;
+        color: white;
+        border-radius: 100%;
+        margin: 22px auto;
+        position: relative;
+        left: 25%;
+    }
+
+    .submit_form:hover {
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 950px) {
+    .creation_form {
+        width: fit-content;
+        margin: 30px auto;
+    }
+
+    .creation_form h4 {
+        width: 70%;
+        margin: 22px auto;
+    }
+
+    .creation_form ul {
+        width: 100%;
+    }
+
+    .block {
+        display: block;
+        color: #260b53;
+        width: fit-content;
+    }
+
+    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number {
+        width: 100%;
+        height: 30px;
+        border: 1px dotted #47297B;
+        background-color: #47297B;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        font-stretch: ultra-expanded;
+    }
+
+    .submit_form {
+        border: 1px solid #47297B;
+        background-color: #47297B;
+        height: 30px;
+        width: 90px;
+        color: white;
+        border-radius: 100%;
+        margin: 22px auto;
+        position: relative;
+        left: 40%;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .creation_form {
+        width: fit-content;
+        margin: 30px auto;
+    }
+
+    .creation_form h4 {
+        width: 70%;
+        margin: 22px auto;
+    }
+
+    .creation_form ul {
+        width: 100%;
+    }
+
+    .block {
+        display: block;
+        color: #260b53;
+        width: fit-content;
+    }
+
+    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number {
+        width: 100%;
+        height: 30px;
+        border: 1px dotted #47297B;
+        background-color: #47297B;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        font-stretch: ultra-expanded;
+    }
+
+    .submit_form {
+        border: 1px solid #47297B;
+        background-color: #47297B;
+        height: 30px;
+        width: 90px;
+        color: white;
+        border-radius: 100%;
+        margin: 22px auto;
+        position: relative;
+        left: 42%;
+        cursor: pointer;
+    }
+}
