@@ -8,7 +8,7 @@ class CreateAccountForm(UserCreationForm):
     last_name = forms.CharField(max_length=30)
     email = forms.EmailField()
     phone_number = forms.CharField(max_length=30)
-    username = forms.CharField(max_length=20, initial="".join(random.choices(string.ascii_letters, k=12)))
+    username = forms.CharField(max_length=20)
 
     class Meta:
         model = User
