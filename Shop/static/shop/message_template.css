@@ -1,0 +1,107 @@
+body {
+    color: #1a0244; 
+}
+
+.sectional h1 {
+    padding: 0 5px;
+}
+
+@media screen and (min-width: 950px) {
+    body {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .icon {
+        display: block;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .sectional {
+        width: 100%;
+        margin-bottom: 240px;
+    }
+
+    .sectional h1 {
+        display: block;
+        padding: 0 20px;
+        margin-top: -8%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 950px) {
+    body {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .icon {
+        display: block;
+        width: 50%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .sectional {
+        width: 100%;
+        margin-bottom: 240px;
+    }
+
+    .sectional h1 {
+        display: block;
+        padding: 0 15px;
+        margin-top: -30px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+    body {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .icon {
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .sectional {
+        width: 100%;
+        margin-bottom: 200px;
+    }
+
+    .sectional h1 {
+        display: block;
+        padding: 0 15px;
+        margin-top: -50px !important;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .icon {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .sectional {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .sectional h1 {
+        display: block;
+        margin-top: -40px !important;
+        padding: 0 12px;
+        text-align: center;
+    }
+}

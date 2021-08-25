@@ -7,39 +7,71 @@
 {% endblock %}
 
 {% block content %}
-    <div class="creation_form">
-        <form method="POST" class="form">
-            {% csrf_token %}
-            <h4 class="surname">
-                <span class="block">First Name:</span> <span class="box">{{ create_form.first_name }}</span>
-            </h4>
-            <h4>
-                <span class="block">Last Name:</span> <span class="box">{{ create_form.last_name }}</span>
-            </h4>
-            <h4>
-                <span class="block">Username:</span> <span class="box">{{ create_form.username }}</span>
-            </h4>
-            <h4>
-                <span class="block">Email:</span> <span class="box">{{ create_form.email }}</span>
-            </h4>
-            <h4>
-                <span class="block">Password:</span> <span class="box">{{ create_form.password1 }}</span>
-                <ul>
-                    <li>Your password can’t be too similar to your other personal information.</li>
-                    <li>Your password must contain at least 8 characters.</li>
-                    <li>Your password can’t be a commonly used password.</li>
-                    <li>Your password can’t be entirely numeric.</li>
-                </ul>
-            </h4>
-            <h4>
-                <span class="block">Confirm Password:</span> <span class="box">{{ create_form.password2 }}</span>
-                <br>
-                Enter the same password as before, for verification.
-            </h4>
-            <h4>
-                <span class="block">Phone Number:</span> <span class="box">{{ create_form.phone_number }}</span>
-            </h4>
-            <button type="submit" >Register</buttton>
-        </form>
+    <div class="linkit">
+      <button class="tablink" onclick="openPage('Signup', this)">Create an Account</button>
+      <button id="defaultOpen" class="tablink" onclick="openPage('Login', this)">Login</button>
     </div>
+
+    <div class="content">
+      <div id="Signup" class="tabcontent">
+        <div class="creation_form">
+            <form method="POST" class="form">
+                {% csrf_token %}
+                <h4 class="surname">
+                    <span class="block">First Name:</span> <span class="box">{{ create_form.first_name }}</span>
+                </h4>
+                <h4>
+                    <span class="block">Last Name:</span> <span class="box">{{ create_form.last_name }}</span>
+                </h4>
+                <h4>
+                    <span class="block">Username:</span> <span class="box">{{ create_form.username }}</span>
+                </h4>
+                <h4>
+                    <span class="block">Email:</span> <span class="box">{{ create_form.email }}</span>
+                </h4>
+                <h4>
+                    <span class="block">Password:</span> <span class="box">{{ create_form.password1 }}</span>
+                    <ul>
+                        <li>Your password can’t be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can’t be a commonly used password.</li>
+                        <li>Your password can’t be entirely numeric.</li>
+                    </ul>
+                </h4>
+                <h4>
+                    <span class="block">Confirm Password:</span> <span class="box">{{ create_form.password2 }}</span>
+                    <br>
+                    Enter the same password as before, for verification.
+                </h4>
+                <h4>
+                    <span class="block">Phone Number:</span> <span class="box">{{ create_form.phone_number }}</span>
+                </h4>
+                <span class="butto_cover"> <button type="submit" name="creation_form" class="butto">Register</buttton> </span>
+            </form>
+        </div>
+      </div>
+      <div id="Login" class="tabcontent">
+        <form method="POST" class="login_form">
+            {% csrf_token %}
+            <h4 class="email_block">
+                <span class="block"> Email: </span> <span class="box"> {{ login_form.loginmail }} </span>
+            </h4>
+            <h4>
+                <span class="block"> Password: </span> <span class="box"> {{ login_form.login_password }} </span>
+            </h4>
+<!--            <h4>
+                <span class="block"> Email: </span> <span class="box"> <input type="email" name="login_email"> </span>
+            </h4>
+            <h4>
+                <span class="block"> Password: </span> <span class="box"> <input type="password" name="login_password"> </span>
+            </h4> -->
+            <span class="butto_cover"> <button type="" submit name="login_form" class="butto">Login</button> </span>
+        </form>
+      </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'shop/create_an_account.js' %}"></script>
 {% endblock %}

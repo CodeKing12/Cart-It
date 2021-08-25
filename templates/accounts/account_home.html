@@ -1,0 +1,10 @@
+{% extends "accounts_base.html" %}
+
+{% block content %}
+    <div class="cart">
+    
+        {% for item in all_products %}
+            <h1>{{ item }}</h1>
+        {% endfor %}
+    </div>
+{% endblock %}

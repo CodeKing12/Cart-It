@@ -32,8 +32,11 @@
         <h3>Product Description</h3>
         {{ product.product_info | safe }}
         <span></span>
-        <button class="money_buttons">Add to Cart</button>
-        <button class="money_buttons">Checkout Now</button>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="money_buttons">Add to Cart</button>
+        </form>
+            <button class="money_buttons">Checkout Now</button>
     </div>
 {% endblock %}
 

@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from .models import Categories, Product, PostImages
 from django.db.models import Q
+from Accounts.models import Cart
+from django.contrib.auth.models import User
 
 # Create your views here.
 def shophome(request):
@@ -19,4 +21,9 @@ def category_items(request, categories):
 def product_details(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product_images = PostImages.objects.filter(post=product)
+    if request.method == "POST":
+        user = request.user
+        yourcart = Cart.objects.get(user=user)
+        yourcart.products.add(product)
+        return HttpResponse(yourcart.products.all())
     return render(request, "shop/product_info.html", {"product": product, "product_images": product_images})

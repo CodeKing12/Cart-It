@@ -13,3 +13,7 @@ class CreateAccountForm(UserCreationForm):
     class Meta:
         model = User
         fields = ["first_name", "last_name", "username", "email", "password1", "password2", "phone_number"]
+
+class LoginForm(forms.Form):
+    loginmail = forms.EmailField(max_length=60)
+    login_password = forms.CharField(widget=forms.PasswordInput())

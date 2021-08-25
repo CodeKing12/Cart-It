@@ -1,5 +1,9 @@
 
 @media screen and (max-width: 500px) {
+    .tablink {
+        font-size: 20px !important;
+    }
+
     .creation_form {
         margin-top: 30px;
         width: 100%;
@@ -12,12 +16,24 @@
         object-fit: contain;
     }
 
+    .login_form {
+        margin-top: 40px;
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .login_form h4 {
+        width: 100%;
+        margin: 40px auto;
+        object-fit: contain;
+    }
+
     .block {
         display: block;
         color: #260b53;
     }
 
-    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number, #id_username {
+    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number, #id_username, #id_loginmail, #id_login_password {
         width: 90%;
         height: 35px;
         border: 1px dotted #47297B;
@@ -48,7 +64,7 @@
         cursor: pointer;
     }
 
-    #id_first_name:focus, #id_last_name:focus, #id_email:focus, #id_password1:focus, #id_password2:focus, #id_phone_number:focus, #id_username:focus {
+    #id_first_name:focus, #id_last_name:focus, #id_email:focus, #id_password1:focus, #id_password2:focus, #id_phone_number:focus, #id_username:focus, #id_loginmail:focus, #id_login_password:focus {
         color: #1f0746;
         font-weight: bold;
         background-color: rgb(233, 233, 233);
@@ -75,13 +91,27 @@
         width: 100%;
     }
 
+    .login_form {
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    .login_form h4 {
+        width: 70%;
+        margin: 40px auto;
+    }
+
+    .login_form ul {
+        width: 100%;
+    }
+
     .block {
         display: block;
         color: #260b53;
         width: fit-content;
     }
 
-    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number, #id_username {
+    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number, #id_username, #id_loginmail, #id_login_password {
         width: 100%;
         height: 40px;
         border: 1px dotted #47297B;
@@ -105,7 +135,7 @@
         cursor: pointer;
     }
 
-    #id_first_name:focus, #id_last_name:focus, #id_email:focus, #id_password1:focus, #id_password2:focus, #id_phone_number:focus, #id_username:focus {
+    #id_first_name:focus, #id_last_name:focus, #id_email:focus, #id_password1:focus, #id_password2:focus, #id_phone_number:focus, #id_username:focus, #id_loginmail:focus, #id_login_password:focus {
         color: #1f0746;
         font-weight: bold;
         background-color: rgb(233, 233, 233);
@@ -127,13 +157,27 @@
         width: 100%;
     }
 
+    .login_form {
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    .login_form h4 {
+        width: 70%;
+        margin: 50px auto;
+    }
+
+    .login_form ul {
+        width: 100%;
+    }
+
     .block {
         display: block;
         color: #260b53;
         width: fit-content;
     }
 
-    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number, #id_username {
+    #id_first_name, #id_last_name, #id_email, #id_password1, #id_password2, #id_phone_number, #id_username, #id_loginmail, #id_login_password {
         width: 100%;
         height: 45px;
         border: 1px dotted #47297B;
@@ -163,9 +207,54 @@
         
     }
 
-    #id_first_name:focus, #id_last_name:focus, #id_email:focus, #id_password1:focus, #id_password2:focus, #id_phone_number:focus, #id_username:focus {
+    #id_first_name:focus, #id_last_name:focus, #id_email:focus, #id_password1:focus, #id_password2:focus, #id_phone_number:focus, #id_username:focus, #id_loginmail:focus, #id_login_password:focus {
         color: #1f0746;
         font-weight: bold;
         background-color: rgb(233, 233, 233);
     } 
+}
+
+.tablink {
+    height: 60px;
+    font-size: 25px;
+    border: none;
+    float: left;
+    width: 50%;
+    background-color: #47297B;
+    color: white;
+    border-top: 1px solid white;
+}
+
+.tabcontent {
+    display: none;
+    height: 100%;
+    padding-top: 80px;
+}
+
+.selected {
+    display: block;
+    background-color: white;
+    color: #47297B;
+}
+
+.butto {
+    margin: 10px auto;
+    width: 80px;
+    height: 30px;
+    background-color: #47297B;
+    border: 1px solid #47297B;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.butto_cover {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.block {
+    font-size: 17px;
 }

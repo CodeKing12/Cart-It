@@ -277,8 +277,8 @@ a {
 }
 
 .nav-item a:hover {
-    color: #b394f1 !important;
-    background-color: #47297B important;
+    color: white !important;
+    background-color: #47297B !important;
 }
 
 #secnav li a {
